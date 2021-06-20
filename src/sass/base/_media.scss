@@ -40,6 +40,12 @@
             margin-top: 36px;
         }
     }
+    .carousel {
+        min-height: fit-content;
+        &__wrapper {
+            width: 80%;
+        }
+    }
 }
 @media (max-width: 767px) {
     .container {
