@@ -26,11 +26,56 @@ $(document).ready(function(){
           e.preventDefault();
           $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
           $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-        })
+        });
       });
-    };
+    }
 
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back'); 
+
+    $(".footer__map-show").on("click", function() {
+      $(".footer__map").css({
+        "display": "block"
+      });
+      $(".footer__map-show").css({
+        "display": "none"
+      });
+      $(".footer__map-hide").css({
+        "display": "block"
+      });
+    });
+
+    $(".footer__map-hide").on("click", function() {
+      $(".footer__map").css({
+        "display": "none"
+      });
+      $(".footer__map-show").css({
+        "display": "block"
+      });
+      $(".footer__map-hide").css({
+        "display": "none"
+      });
+    });
+
+    //modal
+
+    $('[data-modal=consultation]').on('click', function() {
+      $('.overlay, #consultation').fadeIn(200);
+    });
+
+    $('.modal__close').on('click', function (){
+      $('.overlay, #consultation, #thanks, #order').fadeOut(200);
+    });
+
+    $('.button_mini').on('click', function() {
+      $('.overlay, #order').fadeIn(200);
+    }); 
+    
+    $('.button_mini').each(function(i) {
+      $(this).on('click', function() {
+        $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+        $('.overlay, #order').fadeIn(200);
+      });
+    });
 });
 

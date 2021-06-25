@@ -71,6 +71,9 @@
             }
         }
     }
+    .reviews {
+        padding-bottom: 20px;
+    }
 }
 @media (max-width: 767px) {
     .container {
@@ -178,6 +181,24 @@
             text-align: center;
         }
     }
+    .footer {
+        &__info {
+            width: 100%;
+            height: fit-content;
+            position: relative;
+            padding: 35px 0;
+        }
+        &__addr {
+            margin-top: 0px;
+        }
+        &__map {
+            height: 300px;
+            display: none;
+            &-show {
+                display: block;
+            }
+        }
+    }
 }
 @media (max-width: 575px) {
     .container {
@@ -251,6 +272,11 @@
     .reviews {
         &__descr {
             text-align: center;
+        }
+    }
+    .footer {
+        &__addr {
+            font-size: 18px;
         }
     }
 }
