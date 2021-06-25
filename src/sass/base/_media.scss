@@ -279,4 +279,17 @@
             font-size: 18px;
         }
     }
+    .modal {
+        width: 294px;
+        &__descr {
+            font-size: 15px;
+        }
+        &__close {
+            top: 5px;
+            right: 7px;
+        }
+    }
+    .feed-form {
+        width: 90%;
+    }
 }
